@@ -5,7 +5,7 @@
 //Closure - limits scope leak
 
 "use strict";
-let Contact = /** @class */ (function () {
+var Contact = /** @class */ (function () {
     // constructor
     function Contact(fullName, contactNumber, emailAddress) {
         this.m_fullName = fullName;

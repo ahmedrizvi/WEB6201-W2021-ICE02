@@ -5,7 +5,9 @@
 //Closure - limits scope leak
 
 "use strict";
-let Contact = /** @class */ (function () {
+
+"use strict";
+var Contact = /** @class */ (function () {
     // constructor
     function Contact(fullName, contactNumber, emailAddress) {
         this.m_fullName = fullName;
@@ -117,8 +119,6 @@ let Contact = /** @class */ (function () {
             event.preventDefault();
 
             let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
-
-            console.log(contact.toString());
         });
     }
 
