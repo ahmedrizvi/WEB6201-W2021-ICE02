@@ -29,8 +29,7 @@ class Contact {
   }
 
   // constructor
-  constructor(fullName, contactNumber, emailAddress) 
-  {
+  constructor(fullName, contactNumber, emailAddress) {
     this.m_fullName = fullName;
     this.m_contactNumber = contactNumber;
     this.m_emailAddress = emailAddress;
@@ -140,7 +139,7 @@ class Contact {
 
             let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
 
-            console.log(contact);
+            console.log(contact.toString());
         });
     }
 
