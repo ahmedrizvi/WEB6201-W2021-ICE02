@@ -7,8 +7,7 @@
 "use strict";
 
 // Contact class
-class Contact 
-{
+class Contact {
     // constructor
     constructor(fullName, contactNumber, emailAddress) {
         this.m_fullName = fullName;
@@ -17,7 +16,9 @@ class Contact
     }
     // methods
     toString() {
-        return `Full Name      : ${this.m_fullName} \nContact Number : ${this.m_contactNumber} \nEmail Address  : ${this.m_emailAddress}`;
+        return `Full Name: ${this.m_fullName}
+        \nContact Number: ${this.m_contactNumber}
+        \nEmail Address: ${this.m_emailAddress}`;
     }
 }
 
