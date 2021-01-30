@@ -10,7 +10,7 @@ class Contact {
     this.m_fullName = value;
   }
   get ContactNumber() {
-    return this.m_contactNumber;
+    return this.ContactNumber;
   }
   set ContactNumber(value) {
     this.m_contactNumber = value;
@@ -31,9 +31,9 @@ class Contact {
    */
   constructor(fullName = "", contactNumber = "", emailAddress = "") 
   {
-    this.FullName = fullName;
-    this.ContactNumber = contactNumber;
-    this.EmailAddress = emailAddress;
+    FullName = fullName;
+    ContactNumber = contactNumber;
+    EmailAddress = emailAddress;
   }
 
   // methods
@@ -44,7 +44,7 @@ class Contact {
    * @returns {string}
    */
   toString() {
-    return `Full Name      : ${this.FullName} \nContact Number : ${this.ContactNumber} \nEmail Address  : ${this.EmailAddress}`;
+    return `Full Name      : ${this.m_fullName} \nContact Number : ${this.m_contactNumber} \nEmail Address  : ${this.m_emailAddress}`;
   }
 
   /**
@@ -54,9 +54,9 @@ class Contact {
    */
   toJSON(){
     return {
-      "fullName": this.FullName,
-      "contactNumber": this.ContactNumber,
-      "emailAddress": this.EmailAddress
+      "fullName": this.fullName,
+      "contactNumber": this.contactNumber,
+      "emailAddress": this.emailAddress
     }
   }
 
@@ -66,14 +66,11 @@ class Contact {
    * @return {string} 
    */
   serialize(){
-    if(this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== ""){
-      return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`; 
+    if(this.fullName !== ""){
+
     }
-    else{
-      console.error("One or more of the Contact's properties is empty");
-      return null;
-    }
-    
+
+    return `${this.m_fullName},${this.m_contactNumber},${this.m_emailAddress}`; 
   }
 
   /**
@@ -85,8 +82,8 @@ class Contact {
    */
   deserialize(data){
     let propertyArray = data.split(",");
-    this.FullName = propertyArray[0];
+    this.fullName = propertyArray[0];
     this.ContactNumber = propertyArray[1];
-    this.EmailAddress = propertyArray[2];
+    this.emailAddress = propertyArray[2];
   }
 }

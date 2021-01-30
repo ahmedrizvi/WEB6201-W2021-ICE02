@@ -132,7 +132,7 @@
           <td>${contact.emailAddress}</td>
         </tr>`; 
           
-        }
+        } 
         contactList.innerHTML = data;
       }
     }

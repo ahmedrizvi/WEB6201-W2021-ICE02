@@ -102,7 +102,7 @@
         sendButton.addEventListener("click", function(event){
             //event.preventDefault();
 
-            let contact = new Contact(FullName.value, ContactNumber.value, EmailAddress.value);
+            let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
 
             if (contact.serialize()){
               localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
@@ -113,12 +113,13 @@
 
     function displayContactList(){
       
+      
+      
       if (localStorage.length > 0){
         let contactList = document.getElementById("contactList");
           
         let data ="";
-
-        for (let index = 0; index < localStorage.length; index++) {
+        for (let index = 0; index < localStorage; index++) {
 
           let contactData = localStorage.getItem((index + 1).toString());
 
@@ -129,10 +130,10 @@
           <th scope="row">${index + 1}</th>
           <td>${contact.FullName}</td>
           <td>${contact.ContactNumber}</td>
-          <td>${contact.emailAddress}</td>
+          <td>example@example.com</td>
         </tr>`; 
           
-        }
+        } 
         contactList.innerHTML = data;
       }
     }

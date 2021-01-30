@@ -10,7 +10,7 @@ class Contact {
     this.m_fullName = value;
   }
   get ContactNumber() {
-    return this.m_contactNumber;
+    return this.ContactNumber;
   }
   set ContactNumber(value) {
     this.m_contactNumber = value;
@@ -69,8 +69,8 @@ class Contact {
     if(this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== ""){
       return `${this.FullName},${this.ContactNumber},${this.EmailAddress}`; 
     }
-    else{
-      console.error("One or more of the Contact's properties is empty");
+    else if(this.FullName === "" && this.ContactNumber === "" && this.EmailAddress === ""){
+      console.error("Contact is empty");
       return null;
     }
     

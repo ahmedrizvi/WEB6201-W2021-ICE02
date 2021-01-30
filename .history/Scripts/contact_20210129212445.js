@@ -10,7 +10,7 @@ class Contact {
     this.m_fullName = value;
   }
   get ContactNumber() {
-    return this.m_contactNumber;
+    return this.ContactNumber;
   }
   set ContactNumber(value) {
     this.m_contactNumber = value;
