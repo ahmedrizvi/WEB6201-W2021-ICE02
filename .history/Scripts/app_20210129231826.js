@@ -116,7 +116,7 @@
       if (localStorage.length > 0){
         let contactList = document.getElementById("contactList");
           
-        let data = "";
+        let data ="";
 
         for (let index = 0; index < localStorage.length; index++) {
 
