@@ -102,7 +102,7 @@
         sendButton.addEventListener("click", function(event){
             event.preventDefault();
 
-            let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
+            let contact = new Contact(fullName.value, ContactNumber.value, EmailAddress.value);
 
             if (contact.serialize()){
               localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());

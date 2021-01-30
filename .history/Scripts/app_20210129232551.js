@@ -100,9 +100,9 @@
 
         let sendButton = document.getElementById("sendButton");
         sendButton.addEventListener("click", function(event){
-            event.preventDefault();
+            //event.preventDefault();
 
-            let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
+            let contact = new Contact(FullName.value, ContactNumber.value, EmailAddress.value);
 
             if (contact.serialize()){
               localStorage.setItem((localStorage.length + 1).toString(), contact.serialize());
